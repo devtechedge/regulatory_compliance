@@ -1,6 +1,6 @@
 # Security
 
-RegTrace-AI is a **local demo**. It is not a production compliance platform. This document describes the threat model as shipped, not a target-state control list.
+RegTrace-AI is a **demo** (local Compose or Vercel demo-mode). It is not a production compliance platform. This document describes the threat model as shipped, not a target-state control list.
 
 ## What this demo is
 
@@ -10,9 +10,9 @@ An open Human-in-the-Loop dashboard plus API. Reviewers load a project pack, run
 
 ### No authentication
 
-There is no login, session, CSRF token, or role model. The dashboard and `/api/*` are reachable by anyone who can hit the process (typically `localhost`).
+There is no login, session, CSRF token, or role model. The dashboard and `/api/*` are reachable by anyone who can hit the process (typically `localhost`). The Vercel demo has no auth and in-memory HITL (reviews reset on cold start).
 
-**Residual risk:** anyone who can reach the API can list projects, trigger evaluations, and **accept or reject findings**. Treat the demo as trusted-network / local-only.
+**Residual risk:** anyone who can reach the API can list projects, trigger evaluations, and **accept or reject findings**. Treat the local Compose path as trusted-network; treat the Vercel demo as public and ephemeral.
 
 ### Cross-site scripting (rendered findings)
 
@@ -44,7 +44,7 @@ Framework JSON under `data/` is curated locator text, not a live legal feed. Do 
 
 ## Out of scope (not claimed)
 
-Rate limiting, audit log export beyond the in-app eval-case list, encryption at rest, SSO, and a public hosted backend.
+Rate limiting, durable HITL persistence on Vercel, audit log export beyond the in-app eval-case list, encryption at rest, and SSO.
 
 ## Reporting
 

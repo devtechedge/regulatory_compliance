@@ -2,6 +2,7 @@
 
 HITL Web3 compliance copilot for VASP licensing: source-traced MiCA / VARA mapping, hallucination flags, and a human review dashboard.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?logo=vercel)](#live-demo)
 [![CI](https://github.com/devtechedge/regulatory_compliance/actions/workflows/ci.yml/badge.svg)](https://github.com/devtechedge/regulatory_compliance/actions/workflows/ci.yml)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.111-teal?logo=fastapi)](https://fastapi.tiangolo.com/)
@@ -12,9 +13,11 @@ HITL Web3 compliance copilot for VASP licensing: source-traced MiCA / VARA mappi
 
 ## Live Demo
 
-No public hosted backend yet. Clone, Compose, then open the seeded **Aurum Custody** pack.
+**PRODUCTION_URL** — set after first Vercel deploy (do not treat this placeholder as a live host).
 
-> **Status:** Local Docker Compose demo with seeded MiCA / VARA modules and a fictional VASP pack. Deterministic retrieval-bounded generator; no API key. Findings are not legal advice. A CI workflow is in the repo; runs are pending Actions reinstatement (ticket 4688107) — do not treat the CI badge as a live pass.
+> **Status:** Vercel demo-mode (Next.js API routes, seeded Aurum Custody, HITL reviews in-memory / reset on cold start). Local Compose remains the full FastAPI + Postgres path. Deterministic retrieval-bounded generator; no API key. Findings are not legal advice. A CI workflow is in the repo; runs are pending Actions reinstatement (ticket 4688107) — do not treat the CI badge as a live pass.
+
+Vercel project Root Directory is `frontend` (Next.js App Router demo API; FastAPI is not part of the Vercel build).
 
 ```bash
 cp .env.example .env
@@ -54,19 +57,23 @@ This is compliance engineering, not a smart-contract auditor.
 | Layer | Technology |
 |-------|------------|
 | Frontend | Next.js App Router, TypeScript, Tailwind |
-| API | FastAPI, SQLAlchemy 2, pydantic v2 |
+| API | FastAPI, SQLAlchemy 2, pydantic v2 (Compose / local); Next.js App Router demo routes on Vercel |
 | Retrieval | BM25 + TF-IDF (no embedding API) |
-| Data | Postgres in Compose; SQLite locally; seeded demo |
+| Data | Postgres in Compose; SQLite locally; seeded demo JSON on Vercel |
 | Generator | Deterministic writer; optional OpenAI |
-| Hosting | Local Docker Compose (no public demo) |
+| Hosting | Vercel demo-mode (same-origin `/api`); Docker Compose for FastAPI + Postgres |
 
 ---
 
 ## Quick Start
 
-### Docker Compose (preferred)
+### Vercel demo-mode (same-origin `/api`)
 
-Copy `.env.example` to `.env`, then start postgres, api, and web with compose.
+Leave `NEXT_PUBLIC_API_URL` empty. The Next.js app serves seeded Aurum Custody, framework JSON, and a snapshot evaluation from `frontend/app/api/*`. HITL reviews are in-memory and reset on cold start.
+
+### Docker Compose (full FastAPI + Postgres)
+
+Copy `.env.example` to `.env`, set `NEXT_PUBLIC_API_URL=http://localhost:8000`, then start postgres, api, and web with compose.
 
 - API: http://localhost:8000/docs and GET /api/health
 - Web: http://localhost:3000
@@ -80,7 +87,7 @@ Postgres is optional. The API defaults to SQLite if DATABASE_URL is unset.
 
 From `backend/`, create a virtualenv, install the Python requirements file, export `DATA_DIR=../data` and a sqlite `DATABASE_URL`, then start uvicorn on `app.main:app` port 8000.
 
-From `frontend/`, install Node dependencies, export `NEXT_PUBLIC_API_URL=http://localhost:8000`, then start the Next.js dev server.
+From `frontend/`, install Node dependencies. Leave `NEXT_PUBLIC_API_URL` empty to use the Next demo API, or export `NEXT_PUBLIC_API_URL=http://localhost:8000` to use FastAPI, then start the Next.js dev server.
 
 Seed runs on API startup. To re-seed after wiping the DB, from backend/: `python -m app.seed`.
 
