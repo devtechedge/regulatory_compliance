@@ -2,7 +2,7 @@
 
 HITL Web3 compliance copilot for VASP licensing: source-traced MiCA / VARA mapping, hallucination flags, and a human review dashboard.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?logo=vercel)](#live-demo)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?logo=vercel)](https://regtrace-ai.vercel.app)
 [![CI](https://github.com/devtechedge/regulatory_compliance/actions/workflows/ci.yml/badge.svg)](https://github.com/devtechedge/regulatory_compliance/actions/workflows/ci.yml)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.111-teal?logo=fastapi)](https://fastapi.tiangolo.com/)
@@ -13,7 +13,7 @@ HITL Web3 compliance copilot for VASP licensing: source-traced MiCA / VARA mappi
 
 ## Live Demo
 
-**PRODUCTION_URL** — set after first Vercel deploy (do not treat this placeholder as a live host).
+[https://regtrace-ai.vercel.app](https://regtrace-ai.vercel.app)
 
 > **Status:** Vercel demo-mode (Next.js API routes, seeded Aurum Custody, HITL reviews in-memory / reset on cold start). Local Compose remains the full FastAPI + Postgres path. Deterministic retrieval-bounded generator; no API key. Findings are not legal advice. A CI workflow is in the repo; runs are pending Actions reinstatement (ticket 4688107) — do not treat the CI badge as a live pass.
 
