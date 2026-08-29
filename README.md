@@ -2,6 +2,7 @@
 
 HITL Web3 compliance copilot for VASP licensing: source-traced MiCA / VARA mapping, hallucination flags, and a human review dashboard.
 
+[![CI](https://github.com/devtechedge/regulatory_compliance/actions/workflows/ci.yml/badge.svg)](https://github.com/devtechedge/regulatory_compliance/actions/workflows/ci.yml)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.111-teal?logo=fastapi)](https://fastapi.tiangolo.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
@@ -13,7 +14,7 @@ HITL Web3 compliance copilot for VASP licensing: source-traced MiCA / VARA mappi
 
 No public hosted backend yet. Clone, Compose, then open the seeded **Aurum Custody** pack.
 
-> **Status:** Local Docker Compose demo with seeded MiCA / VARA modules and a fictional VASP pack. Deterministic retrieval-bounded generator; no API key. Findings are not legal advice.
+> **Status:** Local Docker Compose demo with seeded MiCA / VARA modules and a fictional VASP pack. Deterministic retrieval-bounded generator; no API key. Findings are not legal advice. A CI workflow is in the repo; runs are pending Actions reinstatement (ticket 4688107) — do not treat the CI badge as a live pass.
 
 ```bash
 cp .env.example .env
@@ -90,6 +91,10 @@ GET  /api/health
 GET  /api/frameworks
 POST /api/projects/aurum-custody/evaluate   {"frameworks":["MiCA","VARA"]}
 ```
+
+## Tests
+
+pytest backend/tests; frontend typecheck; Playwright from frontend/.
 
 ## License
 
