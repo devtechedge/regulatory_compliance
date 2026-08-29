@@ -35,3 +35,6 @@ venv/
 *.db
 
 *.tsbuildinfo
+playwright-report/
+test-results/
+backend/regtrace.db
