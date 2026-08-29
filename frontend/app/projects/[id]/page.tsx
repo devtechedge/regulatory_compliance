@@ -79,6 +79,7 @@ export default function ProjectWorkspacePage() {
           <button
             onClick={evaluate}
             disabled={busy}
+            data-testid="evaluate-button"
             className="rounded-sm bg-mint px-3 py-1.5 text-sm font-medium text-ink-950 hover:bg-white disabled:opacity-50"
           >
             {busy ? "Evaluating…" : "Run MiCA + VARA evaluation"}
@@ -95,11 +96,14 @@ export default function ProjectWorkspacePage() {
       </div>
       {error && <p className="text-sm text-danger">{error}</p>}
 
-      <div className="grid min-h-[72vh] grid-cols-1 overflow-hidden border border-line lg:grid-cols-2">
+      <div
+        data-testid="workspace-split"
+        className="grid min-h-[72vh] grid-cols-1 overflow-hidden border border-line lg:grid-cols-2"
+      >
         <div className="min-h-[50vh] border-b border-line lg:border-b-0 lg:border-r">
           <DocumentPane documents={project?.documents || []} />
         </div>
-        <div className="flex min-h-0 flex-col bg-ink-950">
+        <div data-testid="findings-pane" className="flex min-h-0 flex-col bg-ink-950">
           <div className="flex items-center justify-between border-b border-line px-4 py-2">
             <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-slate-500">
               AI findings · citation-bound

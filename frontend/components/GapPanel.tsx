@@ -8,7 +8,7 @@ const TONE: Record<string, string> = {
 
 export function GapPanel({ gaps, readiness }: { gaps: Gap[]; readiness: Readiness[] }) {
   return (
-    <section className="border-t border-line bg-ink-950">
+    <section data-testid="gap-panel" className="border-t border-line bg-ink-950">
       <div className="border-b border-line px-4 py-2">
         <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-slate-500">
           Licensing readiness · evidence gaps

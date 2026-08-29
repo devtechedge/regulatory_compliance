@@ -16,7 +16,7 @@ export default function ReviewsPage() {
   }, []);
 
   return (
-    <div className="space-y-5">
+    <div data-testid="eval-cases-page" className="space-y-5">
       <div>
         <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-mint">
           HITL eval-case log

@@ -64,6 +64,7 @@ export default function DashboardPage() {
             <Link
               key={p.id}
               href={`/projects/${p.id}`}
+              data-testid="project-card"
               className="block border border-line bg-ink-900 p-5 hover:border-mint/50"
             >
               <div className="flex items-start justify-between gap-3">

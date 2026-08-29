@@ -39,7 +39,7 @@ export function FindingCard({
   }
 
   return (
-    <article className="border-b border-line bg-ink-900 p-4">
+    <article data-testid="finding-card" className="border-b border-line bg-ink-900 p-4">
       <div className="mb-2 flex flex-wrap items-center gap-2">
         <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-mint">
           {finding.framework}
@@ -100,6 +100,7 @@ export function FindingCard({
         <button
           disabled={busy}
           onClick={() => act("accept")}
+          data-testid="accept-finding"
           className="rounded-sm border border-ok/40 bg-ok/10 px-2.5 py-1 text-xs text-ok hover:bg-ok/20 disabled:opacity-50"
         >
           Accept

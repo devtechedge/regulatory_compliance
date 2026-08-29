@@ -14,7 +14,7 @@ export function DocumentPane({ documents }: { documents: Document[] }) {
   const paragraphs = doc.content.split(/\n\n+/);
 
   return (
-    <div className="flex h-full min-h-0 flex-col">
+    <div data-testid="document-pane" className="flex h-full min-h-0 flex-col">
       <div className="flex items-center justify-between border-b border-line px-4 py-2">
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-slate-500">
