@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="RegTrace-AI">
+  <rect width="32" height="32" rx="6" fill="#07090d"/>
+  <rect x="1" y="1" width="30" height="30" rx="5" fill="none" stroke="#243044" stroke-width="1"/>
+  <path d="M7 9h10M7 14h7M7 19h8" stroke="#2dd4bf" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="22.5" cy="20.5" r="5.2" fill="none" stroke="#2dd4bf" stroke-width="1.6"/>
+  <path d="M20.6 20.7l1.3 1.4 2.6-3" fill="none" stroke="#2dd4bf" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

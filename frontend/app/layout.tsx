@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "RegTrace-AI — HITL Web3 compliance copilot",
   description:
     "Human-in-the-Loop regulatory copilot for VASP licensing. Source-traced MiCA / VARA framework mapping with hallucination mitigation.",
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
