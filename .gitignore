@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.sqlite3
+
+# Node / Next
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.turbo/
+frontend/next-env.d.ts
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Secrets
+*.pem
+*.key
+credentials.json
+
+# local test install
+backend/deps/
+venv/
+
+*.db
+
+*.tsbuildinfo
