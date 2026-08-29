@@ -15,7 +15,7 @@ HITL Web3 compliance copilot for VASP licensing: source-traced MiCA / VARA mappi
 
 [https://regtrace-ai.vercel.app](https://regtrace-ai.vercel.app)
 
-> **Status:** Vercel demo-mode (Next.js API routes, seeded Aurum Custody, HITL reviews in-memory / reset on cold start). Local Compose remains the full FastAPI + Postgres path. Deterministic retrieval-bounded generator; no API key. Findings are not legal advice. A CI workflow is in the repo; runs are pending Actions reinstatement (ticket 4688107) — do not treat the CI badge as a live pass.
+> **Status:** Vercel demo-mode (Next.js API routes, seeded Aurum Custody, HITL reviews in-memory / reset on cold start). Local Compose remains the full FastAPI + Postgres path. Deterministic retrieval-bounded generator; no API key. Findings are not legal advice. CI on `main` is green (pytest, typecheck, Playwright).
 
 Vercel project Root Directory is `frontend` (Next.js App Router demo API; FastAPI is not part of the Vercel build).
 
