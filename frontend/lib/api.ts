@@ -1,6 +1,8 @@
 import type { Finding, Framework, Project, ProjectSummary, ReviewAction, Run } from "./types";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+// Empty string = same-origin Next.js demo API (Vercel / local without FastAPI).
+// Set NEXT_PUBLIC_API_URL=http://localhost:8000 to hit FastAPI (Compose / local backend).
+const API = process.env.NEXT_PUBLIC_API_URL ?? "";
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${API}${path}`, {

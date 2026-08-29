@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { api } from "@/lib/api";
+import { API, api } from "@/lib/api";
 import type { Framework, ProjectSummary, Run } from "@/lib/types";
 
 export default function DashboardPage() {
@@ -51,7 +51,7 @@ export default function DashboardPage() {
 
       {error && (
         <p className="border border-danger/40 bg-danger/10 px-4 py-2 text-sm text-danger">
-          Cannot reach API at {process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}. {error}
+          Cannot reach API at {API || "/api"}. {error}
         </p>
       )}
 
