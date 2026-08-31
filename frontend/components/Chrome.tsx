@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const RAIL = [
   "Human-in-the-Loop (HITL)",
@@ -34,6 +35,7 @@ export function Chrome() {
           >
             MiCA source
           </a>
+          <ThemeToggle />
         </nav>
       </div>
       <div className="border-t border-line bg-ink-900">
