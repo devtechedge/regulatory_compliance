@@ -1,0 +1,1144 @@
+{
+  "id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+  "project_id": "aurum-custody",
+  "frameworks": [
+    "MiCA",
+    "VARA"
+  ],
+  "generator": "deterministic",
+  "created_at": "2026-08-29T18:28:17.354414",
+  "module_count": 24,
+  "findings": [
+    {
+      "id": "efb938d6-4bad-441a-a5bc-9e317bd8f2f8",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "vara-custody-rulebook",
+      "framework": "VARA",
+      "category": "custody",
+      "status": "grounded",
+      "confidence": 0.95,
+      "claim": "The project pack appears to address VARA Client VA Safekeeping (Segregation of Client Virtual Assets) (custody). Evidence aligned with the obligation to licensed custody vasps must safekeep client virtual assets separately from firm assets, maintain accurate books of client entitlements, and implement wallet and key-management controls (including cold storage for a material portion of holdings) consistent with the custody services rulebook. Checklist items observed: client-asset segregation policy aligned to the Custody Rulebook; wallet inventory distinguishing firm vs client, hot vs cold; key-ceremony and multi-party control records. Pack excerpt: \"Aurum Custody \u2014 Confidential Project Pack (White Paper excerpt) AURUM CUSTODY  |  PROJECT PACK v0.9  |  CONFIDENTIAL Target markets: Dubai (VARA) and the Europe\u2026\"",
+      "citations": [
+        {
+          "module_id": "vara-custody-rulebook",
+          "framework": "VARA",
+          "title": "Custody Services Rulebook",
+          "article": "Client VA Safekeeping",
+          "clause": "Segregation of Client Virtual Assets",
+          "url": "https://www.vara.ae/en/rules-and-regulations/",
+          "category": "custody"
+        }
+      ],
+      "flags": [],
+      "coverage": "covered",
+      "retrieval_score": 1.0,
+      "review_action": null
+    },
+    {
+      "id": "b3c0122e-8461-4204-995c-cab979291446",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "vara-reserve-attestation",
+      "framework": "VARA",
+      "category": "reserve",
+      "status": "needs_human_verification",
+      "confidence": 0.72,
+      "claim": "Partial coverage of VARA Reserve and Backing Assets (Attestation and Safekeeping of Reserves) (reserve). Observed: reserve composition and vault/custodian schedule; independent attestation (quantity, quality, segregation). Still missing: encumbrance / lien negative confirmation; attestation frequency and public summary. Pack excerpt: \"product AURUM-X is presented as a fully reserved, allocated gold token. Marketing copy states that \"every token is backed 1:1 by investment-grade gold.\" The bac\u2026\"",
+      "citations": [
+        {
+          "module_id": "vara-reserve-attestation",
+          "framework": "VARA",
+          "title": "VA Issuance Rulebook",
+          "article": "Reserve and Backing Assets",
+          "clause": "Attestation and Safekeeping of Reserves",
+          "url": "https://www.vara.ae/en/rules-and-regulations/",
+          "category": "reserve"
+        }
+      ],
+      "flags": [],
+      "coverage": "partial",
+      "retrieval_score": 0.7128,
+      "review_action": null
+    },
+    {
+      "id": "bbe974d8-0c9c-4c95-bd66-1903484aa04e",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "mica-custody-segregation",
+      "framework": "MiCA",
+      "category": "custody",
+      "status": "needs_human_verification",
+      "confidence": 0.72,
+      "claim": "Partial coverage of MiCA Art. 75 (custody). Observed: wallet inventory and position register; on-chain segregation or equivalent control evidence. Still missing: written custody and administration policy. Pack excerpt: \"Aurum Custody \u2014 Confidential Project Pack (White Paper excerpt) AURUM CUSTODY  |  PROJECT PACK v0.9  |  CONFIDENTIAL Target markets: Dubai (VARA) and the Europe\u2026\"",
+      "citations": [
+        {
+          "module_id": "mica-custody-segregation",
+          "framework": "MiCA",
+          "title": "Title III",
+          "article": "Art. 75",
+          "clause": null,
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
+          "category": "custody"
+        }
+      ],
+      "flags": [],
+      "coverage": "partial",
+      "retrieval_score": 0.6653,
+      "review_action": null
+    },
+    {
+      "id": "dadd19cd-411a-4806-b30a-a0921efa7ef5",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "vara-va-issuance",
+      "framework": "VARA",
+      "category": "disclosures",
+      "status": "grounded",
+      "confidence": 0.708,
+      "claim": "Licensing gap against VARA Issuer Obligations (White Paper and Ongoing Disclosure): the pack does not evidence va issuance activity requires a vara-compliant white paper, ongoing disclosure of material changes, and, for asset-referenced or commodity-linked tokens, a description of backing, custody of backing assets, and redemption mechanics. Missing checklist items include: VA Issuance white paper submitted or prepared for VARA; ongoing-disclosure procedure for material events; redemption and transfer restrictions disclosed. The pack itself flags this as an open drafting gap. Pack excerpt: \"activities to VARA Custody Services and VA Issuance, and the intended EU activities to MiCA crypto-asset service provider (CASP) custody and administration of c\u2026\"",
+      "citations": [
+        {
+          "module_id": "vara-va-issuance",
+          "framework": "VARA",
+          "title": "VA Issuance Rulebook",
+          "article": "Issuer Obligations",
+          "clause": "White Paper and Ongoing Disclosure",
+          "url": "https://www.vara.ae/en/rules-and-regulations/",
+          "category": "disclosures"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.596,
+      "review_action": null
+    },
+    {
+      "id": "d59bae66-b757-4897-9f6f-c4dcc6da0c06",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "vara-conflicts-conduct",
+      "framework": "VARA",
+      "category": "governance",
+      "status": "grounded",
+      "confidence": 0.659,
+      "claim": "Licensing gap against VARA Conflicts of Interest (Identification and Management): the pack does not evidence vasps must identify, manage, and disclose conflicts of interest arising from proprietary activity, related-party dealings, dual roles (for example issuer plus custodian of the same token), and staff personal holdings. Missing checklist items include: conflicts-of-interest policy covering issuer-custodian dual role; related-party transaction register; staff personal-account dealing rules. The pack itself flags this as an open drafting gap. Pack excerpt: \"ational chart shows \"Compliance \u2014 TBD.\" Conflicts of interest are not documented, despite the obvious dual role of issuer and custodian of AURUM-X and the fact \u2026\"",
+      "citations": [
+        {
+          "module_id": "vara-conflicts-conduct",
+          "framework": "VARA",
+          "title": "Company Rulebook",
+          "article": "Conflicts of Interest",
+          "clause": "Identification and Management",
+          "url": "https://www.vara.ae/en/rules-and-regulations/",
+          "category": "governance"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.5148,
+      "review_action": null
+    },
+    {
+      "id": "66beb51d-3f75-408b-88e8-fb5191ce27fb",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "vara-technology-controls",
+      "framework": "VARA",
+      "category": "governance",
+      "status": "grounded",
+      "confidence": 0.61,
+      "claim": "Licensing gap against VARA Technology and Cyber Security (Operational Resilience): the pack does not evidence vasps must maintain technology, cyber-security, and operational-resilience controls proportionate to custody and issuance activities, including access management, incident response, penetration testing, and business continuity for wallet infrastructure. Missing checklist items include: cyber-security and access-management policy; incident-response plan with VARA notification triggers; penetration-test or independent security assessment. The pack itself flags this as an open drafting gap. Pack excerpt: \"ations.  3. Key management, access, and operational resilience (partial) Key ceremonies are run against a written runbook. Privileged access to the MPC console \u2026\"",
+      "citations": [
+        {
+          "module_id": "vara-technology-controls",
+          "framework": "VARA",
+          "title": "Compliance and Risk Management Rulebook",
+          "article": "Technology and Cyber Security",
+          "clause": "Operational Resilience",
+          "url": "https://www.vara.ae/en/rules-and-regulations/",
+          "category": "governance"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.434,
+      "review_action": null
+    },
+    {
+      "id": "403fec08-9b5b-4309-81ea-6716f3bda64b",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "mica-whitepaper-disclosures",
+      "framework": "MiCA",
+      "category": "disclosures",
+      "status": "grounded",
+      "confidence": 0.605,
+      "claim": "Licensing gap against MiCA Art. 6: the pack does not evidence offerings of crypto-assets (other than art/emt where specific titles apply) require a crypto-asset white paper with fair, clear, and not-misleading information on the issuer, the asset, rights, risks, and the underlying technology. Missing checklist items include: MiCA-aligned white paper with required content headings; risk-factor section covering technology, liquidity, and legal risks; notification or publication record for the white paper. The pack itself flags this as an open drafting gap. Pack excerpt: \"um Custody \u2014 Confidential Project Pack (White Paper excerpt) AURUM CUSTODY  |  PROJECT PACK v0.9  |  CONFIDENTIAL Target markets: Dubai (VARA) and the European \u2026\"",
+      "citations": [
+        {
+          "module_id": "mica-whitepaper-disclosures",
+          "framework": "MiCA",
+          "title": "Title II",
+          "article": "Art. 6",
+          "clause": null,
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
+          "category": "disclosures"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.4245,
+      "review_action": null
+    },
+    {
+      "id": "fad25e06-6204-4cff-b9d4-331979d2510d",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "mica-market-abuse",
+      "framework": "MiCA",
+      "category": "market_abuse",
+      "status": "grounded",
+      "confidence": 0.598,
+      "claim": "Licensing gap against MiCA Art. 86: the pack does not evidence persons professionally arranging or executing transactions in crypto-assets must have arrangements to detect and report insider dealing, unlawful disclosure of inside information, and market manipulation. Missing checklist items include: market-abuse surveillance policy; insider list / inside-information handling procedure; suspicious-transaction reporting playbook. The pack itself flags this as an open drafting gap. Pack excerpt: \"omments and it has not been closed.  8. Market abuse and conduct AURUM-X is expected to trade on at least one third-party platform after launch. The pack has no\u2026\"",
+      "citations": [
+        {
+          "module_id": "mica-market-abuse",
+          "framework": "MiCA",
+          "title": "Title VI",
+          "article": "Art. 86",
+          "clause": null,
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
+          "category": "market_abuse"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.4138,
+      "review_action": null
+    },
+    {
+      "id": "9f0e7c7f-a5bf-4fdc-a283-886af2a4c58e",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "vara-vasp-licensing",
+      "framework": "VARA",
+      "category": "licensing",
+      "status": "grounded",
+      "confidence": 0.58,
+      "claim": "Licensing gap against VARA Part III \u2014 Licensing (Licensed VA Activities): the pack does not evidence a person must not carry out a va activity in dubai unless licensed by vara for that specific activity category (for example custody services, broker-dealer, exchange, va issuance). Missing checklist items include: VARA licence (or application) listing each VA Activity; product-to-activity mapping (custody vs issuance); fit-and-proper documentation for controllers and senior managers. The pack itself flags this as an open drafting gap. Pack excerpt: \"pean Union (MiCA) Prepared for internal licensing-gap review. Not an offering document.  1. Issuer and services Aurum Custody FZE (\"Aurum\") is a virtual-asset s\u2026\"",
+      "citations": [
+        {
+          "module_id": "vara-vasp-licensing",
+          "framework": "VARA",
+          "title": "Virtual Assets and Related Activities Regulations 2023",
+          "article": "Part III \u2014 Licensing",
+          "clause": "Licensed VA Activities",
+          "url": "https://www.vara.ae/en/rules-and-regulations/",
+          "category": "licensing"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.3826,
+      "review_action": null
+    },
+    {
+      "id": "e6e379a5-54d8-4b36-bbda-a4c38b09d505",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "vara-disclosures-risk",
+      "framework": "VARA",
+      "category": "disclosures",
+      "status": "grounded",
+      "confidence": 0.557,
+      "claim": "Licensing gap against VARA Public Disclosures (Risk and Product Information): the pack does not evidence client-facing materials must describe the virtual asset, the vasp's role, material risks (including custody, peg/reserve, and technology risks), fees, and the regulatory status of the product. Missing checklist items include: product disclosure statement / white paper for each token; risk-warning set covering custody and reserve risks; fee schedule. The pack itself flags this as an open drafting gap. Pack excerpt: \"th issuer and custodian of AURUM-X.  5. Disclosures and marketing A landing-page draft promises \"bank-grade custody\" and \"fully reserved gold, always.\" Fee lang\u2026\"",
+      "citations": [
+        {
+          "module_id": "vara-disclosures-risk",
+          "framework": "VARA",
+          "title": "Market Conduct Rulebook",
+          "article": "Public Disclosures",
+          "clause": "Risk and Product Information",
+          "url": "https://www.vara.ae/en/rules-and-regulations/",
+          "category": "disclosures"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.345,
+      "review_action": null
+    },
+    {
+      "id": "e7b12f55-2216-4a6a-b9ce-d4e57ceb878b",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "vara-company-governance",
+      "framework": "VARA",
+      "category": "governance",
+      "status": "grounded",
+      "confidence": 0.556,
+      "claim": "Licensing gap against VARA Corporate Governance (Board and Senior Management): the pack does not evidence vasps must maintain a dubai-appropriate governance structure with a competent board or equivalent, appointed senior officers (including compliance and mlro functions), documented policies, and clear reporting lines into the licensed entity. Missing checklist items include: board charter and organisational chart; appointed Compliance Officer and MLRO; governance policies approved by the board. The pack itself flags this as an open drafting gap. Pack excerpt: \"self to be the disclosure document.  6. Governance, conflicts, and prudential Aurum currently has two co-founders (CEO and CTO) and a part-time legal adviser. T\u2026\"",
+      "citations": [
+        {
+          "module_id": "vara-company-governance",
+          "framework": "VARA",
+          "title": "Company Rulebook",
+          "article": "Corporate Governance",
+          "clause": "Board and Senior Management",
+          "url": "https://www.vara.ae/en/rules-and-regulations/",
+          "category": "governance"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.3429,
+      "review_action": null
+    },
+    {
+      "id": "7fdc4202-4075-44ef-8bb6-145faf0f6c0b",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "mica-art-redemption",
+      "framework": "MiCA",
+      "category": "reserve",
+      "status": "grounded",
+      "confidence": 0.554,
+      "claim": "Licensing gap against MiCA Art. 39: the pack does not evidence holders of asset-referenced tokens must have a permanent right of redemption against the issuer at market value of the referenced assets, or by delivery of those assets, under published conditions that are not unduly restrictive. Missing checklist items include: published redemption policy and timelines; operational process for holder redemption requests; liquidity plan supporting redemptions. The pack itself flags this as an open drafting gap. Pack excerpt: \"he letter of intent is silent on liens. Redemption is described in a single sentence: \"Institutional holders may request physical delivery subject to a 400 oz m\u2026\"",
+      "citations": [
+        {
+          "module_id": "mica-art-redemption",
+          "framework": "MiCA",
+          "title": "Title III",
+          "article": "Art. 39",
+          "clause": null,
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
+          "category": "reserve"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.3406,
+      "review_action": null
+    },
+    {
+      "id": "a9371874-ffc7-472b-b175-ae0d25ac9e62",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "vara-market-conduct",
+      "framework": "VARA",
+      "category": "market_abuse",
+      "status": "grounded",
+      "confidence": 0.55,
+      "claim": "Licensing gap against VARA Prohibition of Market Abuse (Manipulation and Insider Dealing): the pack does not evidence vasps must not engage in, and must have controls to detect, market manipulation, wash trading, spoofing, and misuse of inside information. Missing checklist items include: market-abuse / market-conduct policy; surveillance or trade-monitoring arrangements; insider-information and wall-crossing procedure. The pack itself flags this as an open drafting gap. Pack excerpt: \"omments and it has not been closed.  8. Market abuse and conduct AURUM-X is expected to trade on at least one third-party platform after launch. The pack has no\u2026\"",
+      "citations": [
+        {
+          "module_id": "vara-market-conduct",
+          "framework": "VARA",
+          "title": "Market Conduct Rulebook",
+          "article": "Prohibition of Market Abuse",
+          "clause": "Manipulation and Insider Dealing",
+          "url": "https://www.vara.ae/en/rules-and-regulations/",
+          "category": "market_abuse"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.3161,
+      "review_action": null
+    },
+    {
+      "id": "2836b65e-0f56-4105-8c00-ef051a5d797e",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "vara-prudential-capital",
+      "framework": "VARA",
+      "category": "prudential",
+      "status": "grounded",
+      "confidence": 0.55,
+      "claim": "Licensing gap against VARA Prudential Requirements (Capital and Insurance): the pack does not evidence licensed vasps must maintain paid-up capital, liquid resources, and professional-indemnity or equivalent insurance at the levels specified for their licensed va activities, and report capital adequacy to vara on the required cycle. Missing checklist items include: paid-up capital evidence vs. activity category minima; liquidity buffer calculation; professional indemnity / cyber insurance certificates. The pack itself flags this as an open drafting gap. Pack excerpt: \"ocument.  6. Governance, conflicts, and prudential Aurum currently has two co-founders (CEO and CTO) and a part-time legal adviser. There is no board charter, n\u2026\"",
+      "citations": [
+        {
+          "module_id": "vara-prudential-capital",
+          "framework": "VARA",
+          "title": "Company Rulebook",
+          "article": "Prudential Requirements",
+          "clause": "Capital and Insurance",
+          "url": "https://www.vara.ae/en/rules-and-regulations/",
+          "category": "prudential"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.3111,
+      "review_action": null
+    },
+    {
+      "id": "d5915116-c236-43d4-a280-6a203c802aaa",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "mica-art-reserve",
+      "framework": "MiCA",
+      "category": "reserve",
+      "status": "needs_human_verification",
+      "confidence": 0.532,
+      "claim": "Partial coverage of MiCA Art. 36 (reserve). Observed: reserve-of-assets policy and composition schedule; segregation of reserve from issuer operating funds. Still missing: independent attestation or audit of reserve holdings; valuation methodology and frequency. Pack excerpt: \"behalf of clients, plus issuance of an asset-referenced token. No licence has been granted in either jurisdiction. A draft programme of operations exists as an \u2026\"",
+      "citations": [
+        {
+          "module_id": "mica-art-reserve",
+          "framework": "MiCA",
+          "title": "Title III",
+          "article": "Art. 36",
+          "clause": null,
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
+          "category": "reserve"
+        }
+      ],
+      "flags": [],
+      "coverage": "partial",
+      "retrieval_score": 0.3038,
+      "review_action": null
+    },
+    {
+      "id": "4288b6f9-0f89-4e2f-8701-e572b59d3639",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "mica-complaints-handling",
+      "framework": "MiCA",
+      "category": "complaints",
+      "status": "grounded",
+      "confidence": 0.55,
+      "claim": "Licensing gap against MiCA Art. 71: the pack does not evidence casps must establish and maintain effective, transparent procedures for prompt handling of client complaints, publish those procedures, keep records of complaints and remedies, and ensure clients can file free of charge in an official language of the home member state or of the client's location. Missing checklist items include: published complaints-handling procedure; complaints register and SLA metrics; free-of-charge filing channel. The pack itself flags this as an open drafting gap. Pack excerpt: \"ndemnity or cyber insurance binder.  7. Complaints, consumer protection, and client handling The pack contains no complaints-handling procedure, no published ch\u2026\"",
+      "citations": [
+        {
+          "module_id": "mica-complaints-handling",
+          "framework": "MiCA",
+          "title": "Title V",
+          "article": "Art. 71",
+          "clause": null,
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
+          "category": "complaints"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.2988,
+      "review_action": null
+    },
+    {
+      "id": "088d0dfe-f3fe-40d4-ad07-75d4b6b61f4a",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "mica-casp-authorisation",
+      "framework": "MiCA",
+      "category": "licensing",
+      "status": "grounded",
+      "confidence": 0.55,
+      "claim": "Licensing gap against MiCA Art. 59: the pack does not evidence entities providing crypto-asset services in the union must obtain casp authorisation from a competent authority before going live, unless a limited exemption applies. Missing checklist items include: CASP authorisation application or equivalent passporting notice; programme of operations covering each intended crypto-asset service; legal-entity and management-body identification. The pack itself flags this as an open drafting gap. Pack excerpt: \"ontrols, a filed white paper, completed authorisation, or a functioning compliance officer. This excerpt is the sole document in the project pack submitted for \u2026\"",
+      "citations": [
+        {
+          "module_id": "mica-casp-authorisation",
+          "framework": "MiCA",
+          "title": "Title V",
+          "article": "Art. 59",
+          "clause": null,
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
+          "category": "licensing"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.265,
+      "review_action": null
+    },
+    {
+      "id": "3b262f14-ce98-4f2b-ac9f-50c2ecf3b47a",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "mica-outsourcing",
+      "framework": "MiCA",
+      "category": "governance",
+      "status": "grounded",
+      "confidence": 0.55,
+      "claim": "Licensing gap against MiCA Art. 73: the pack does not evidence where a casp outsources operational functions, it remains fully responsible to clients and competent authorities. Missing checklist items include: outsourcing register of critical functions; due-diligence files on material vendors; exit and contingency plans for custody infrastructure. The pack itself flags this as an open drafting gap. Pack excerpt: \"mpetent-authority notification trigger. Outsourcing of the MPC vendor and the cloud observability stack is covered by unsigned MSA templates; there is no outsou\u2026\"",
+      "citations": [
+        {
+          "module_id": "mica-outsourcing",
+          "framework": "MiCA",
+          "title": "Title V",
+          "article": "Art. 73",
+          "clause": null,
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
+          "category": "governance"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.2255,
+      "review_action": null
+    },
+    {
+      "id": "1d9c7261-889d-41b2-bcdf-aa8b194b7d54",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "mica-custody-safekeeping",
+      "framework": "MiCA",
+      "category": "custody",
+      "status": "needs_human_verification",
+      "confidence": 0.471,
+      "claim": "Partial coverage of MiCA Art. 70 (custody). Observed: client asset segregation policy; omnibus vs. segregated wallet inventory. Still missing: credit-institution placement of client fiat. Pack excerpt: \". Custody architecture and client-asset segregation Aurum's custody design is the most mature part of the pack. Client virtual assets are never commingled with \u2026\"",
+      "citations": [
+        {
+          "module_id": "mica-custody-safekeeping",
+          "framework": "MiCA",
+          "title": "Title V",
+          "article": "Art. 70",
+          "clause": null,
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
+          "category": "custody"
+        }
+      ],
+      "flags": [],
+      "coverage": "partial",
+      "retrieval_score": 0.2022,
+      "review_action": null
+    },
+    {
+      "id": "2afc29e4-b4b5-41c1-b011-93b84c8dd0ca",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "vara-consumer-protection",
+      "framework": "VARA",
+      "category": "complaints",
+      "status": "grounded",
+      "confidence": 0.55,
+      "claim": "Licensing gap against VARA Consumer Protection (Fair Treatment and Complaints): the pack does not evidence vasps must treat clients fairly, provide clear product information, operate an accessible complaints scheme with defined timelines, and keep records of complaints, outcomes, and remediation. Missing checklist items include: published complaints scheme with timelines; complaints log and root-cause analysis; fair-treatment / consumer-protection policy. The pack itself flags this as an open drafting gap. Pack excerpt: \"cyber insurance binder.  7. Complaints, consumer protection, and client handling The pack contains no complaints-handling procedure, no published channel, no SL\u2026\"",
+      "citations": [
+        {
+          "module_id": "vara-consumer-protection",
+          "framework": "VARA",
+          "title": "Market Conduct Rulebook",
+          "article": "Consumer Protection",
+          "clause": "Fair Treatment and Complaints",
+          "url": "https://www.vara.ae/en/rules-and-regulations/",
+          "category": "complaints"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.2012,
+      "review_action": null
+    },
+    {
+      "id": "52121961-6f5b-4bf1-8cbf-9b0672487be0",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "vara-aml-cft",
+      "framework": "VARA",
+      "category": "prudential",
+      "status": "grounded",
+      "confidence": 0.55,
+      "claim": "Licensing gap against VARA AML / CFT Programme (CDD, Travel Rule and Sanctions): the pack does not evidence vasps must implement a risk-based aml/cft programme including cdd/kyc, ongoing monitoring, travel rule transmission of originator/beneficiary information, sanctions screening, and sar/str reporting via the mlro. Missing checklist items include: AML/CFT policy and business risk assessment; CDD/KYC playbooks and Travel Rule tooling; sanctions screening configuration. The pack itself flags this as an open drafting gap. Pack excerpt: \"r the VARA Market Conduct Rulebook.  9. AML / CFT A 6-page AML policy skeleton exists. It names CDD tiers and mentions Travel Rule \"integration to be selected.\"\u2026\"",
+      "citations": [
+        {
+          "module_id": "vara-aml-cft",
+          "framework": "VARA",
+          "title": "Compliance and Risk Management Rulebook",
+          "article": "AML / CFT Programme",
+          "clause": "CDD, Travel Rule and Sanctions",
+          "url": "https://www.vara.ae/en/rules-and-regulations/",
+          "category": "prudential"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.1209,
+      "review_action": null
+    },
+    {
+      "id": "7f683c62-4230-403c-a309-9e0927985612",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "mica-operational-resilience",
+      "framework": "MiCA",
+      "category": "governance",
+      "status": "grounded",
+      "confidence": 0.55,
+      "claim": "Licensing gap against MiCA Art. 68: the pack does not evidence casps must have robust governance arrangements, including a clear organisational structure, effective risk-management and internal-control mechanisms, business-continuity plans, and ict security commensurate with the scale of crypto-asset services. Missing checklist items include: governance and organisational chart; ICT and cyber-security policy; business-continuity / disaster-recovery plan. The pack itself flags this as an open drafting gap. Pack excerpt: \"self to be the disclosure document.  6. Governance, conflicts, and prudential Aurum currently has two co-founders (CEO and CTO) and a part-time legal adviser. T\u2026\"",
+      "citations": [
+        {
+          "module_id": "mica-operational-resilience",
+          "framework": "MiCA",
+          "title": "Title V",
+          "article": "Art. 68",
+          "clause": null,
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
+          "category": "governance"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.1097,
+      "review_action": null
+    },
+    {
+      "id": "aaba200b-56c2-4c70-84e3-375a4199f9bd",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "mica-governance-conflicts",
+      "framework": "MiCA",
+      "category": "governance",
+      "status": "grounded",
+      "confidence": 0.55,
+      "claim": "Licensing gap against MiCA Art. 72: the pack does not evidence casps must identify, prevent, manage and disclose conflicts of interest between themselves (including managers, employees and shareholders) and their clients, and among clients. Missing checklist items include: conflicts-of-interest policy; register of identified conflicts; client-facing conflict disclosures. The pack itself flags this as an open drafting gap. Pack excerpt: \"ational chart shows \"Compliance \u2014 TBD.\" Conflicts of interest are not documented, despite the obvious dual role of issuer and custodian of AURUM-X and the fact \u2026\"",
+      "citations": [
+        {
+          "module_id": "mica-governance-conflicts",
+          "framework": "MiCA",
+          "title": "Title V",
+          "article": "Art. 72",
+          "clause": null,
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
+          "category": "governance"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.0398,
+      "review_action": null
+    },
+    {
+      "id": "2d53fe46-5a6d-4baf-a9b3-075ecf6c6e47",
+      "run_id": "585d723f-8dcb-4780-81cb-0c4c6fb2c9c6",
+      "module_id": "mica-prudential-safeguards",
+      "framework": "MiCA",
+      "category": "prudential",
+      "status": "grounded",
+      "confidence": 0.55,
+      "claim": "Licensing gap against MiCA Art. 67: the pack does not evidence authorised casps must hold prudential safeguards equal to the higher of a permanent minimum capital amount or a fraction of fixed overheads, in the form of own funds or an equivalent insurance policy covering the territories where services are provided. Missing checklist items include: own-funds calculation vs. minimum capital / overheads; audited capital position; insurance policy if used as a safeguard. The pack itself flags this as an open drafting gap. Pack excerpt: \"ocument.  6. Governance, conflicts, and prudential Aurum currently has two co-founders (CEO and CTO) and a part-time legal adviser. There is no board charter, n\u2026\"",
+      "citations": [
+        {
+          "module_id": "mica-prudential-safeguards",
+          "framework": "MiCA",
+          "title": "Title V",
+          "article": "Art. 67",
+          "clause": null,
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
+          "category": "prudential"
+        }
+      ],
+      "flags": [],
+      "coverage": "missing",
+      "retrieval_score": 0.0,
+      "review_action": null
+    }
+  ],
+  "gaps": [
+    {
+      "id": "851e3600-289b-4c05-9eeb-3f45983093de",
+      "module_id": "vara-custody-rulebook",
+      "framework": "VARA",
+      "category": "custody",
+      "coverage": "covered",
+      "missing_items": [],
+      "present_items": [
+        "client-asset segregation policy aligned to the Custody Rulebook",
+        "wallet inventory distinguishing firm vs client, hot vs cold",
+        "key-ceremony and multi-party control records",
+        "daily reconciliation of on-chain balances to the client ledger"
+      ],
+      "obligation": "Licensed Custody VASPs must safekeep client virtual assets separately from firm assets, maintain accurate books of client entitlements, and implement wallet and key-management controls (including cold storage for a material portion of holdings) consistent with the Custody Services Rulebook.",
+      "locator": {
+        "title": "Custody Services Rulebook",
+        "article": "Client VA Safekeeping",
+        "clause": "Segregation of Client Virtual Assets",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      }
+    },
+    {
+      "id": "5a734b42-0c10-4051-8488-eb6d00a84d5c",
+      "module_id": "vara-reserve-attestation",
+      "framework": "VARA",
+      "category": "reserve",
+      "coverage": "partial",
+      "missing_items": [
+        "encumbrance / lien negative confirmation",
+        "attestation frequency and public summary"
+      ],
+      "present_items": [
+        "reserve composition and vault/custodian schedule",
+        "independent attestation (quantity, quality, segregation)"
+      ],
+      "obligation": "Where a issued virtual asset is represented as backed by commodities or other assets, the issuer must hold matching reserves with an appropriate custodian, prohibit encumbrance that would defeat holder claims, and obtain periodic independent attestation of quantity, quality, and segregation of the backing assets.",
+      "locator": {
+        "title": "VA Issuance Rulebook",
+        "article": "Reserve and Backing Assets",
+        "clause": "Attestation and Safekeeping of Reserves",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      }
+    },
+    {
+      "id": "9fa6a21e-8261-4020-93c9-8e5c96e14c3d",
+      "module_id": "mica-custody-segregation",
+      "framework": "MiCA",
+      "category": "custody",
+      "coverage": "partial",
+      "missing_items": [
+        "written custody and administration policy"
+      ],
+      "present_items": [
+        "wallet inventory and position register",
+        "on-chain segregation or equivalent control evidence",
+        "key-management and cold-wallet procedures"
+      ],
+      "obligation": "Providers of custody and administration of crypto-assets on behalf of clients must establish a custody policy, maintain a register of positions, keep client crypto-assets segregated on the distributed ledger or by other equivalent means, and exercise due care over control of cryptographic keys.",
+      "locator": {
+        "title": "Title III",
+        "article": "Art. 75",
+        "clause": null,
+        "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj"
+      }
+    },
+    {
+      "id": "9156cea1-854c-4fd4-93c8-b32f06fca178",
+      "module_id": "vara-va-issuance",
+      "framework": "VARA",
+      "category": "disclosures",
+      "coverage": "missing",
+      "missing_items": [
+        "VA Issuance white paper submitted or prepared for VARA",
+        "ongoing-disclosure procedure for material events",
+        "redemption and transfer restrictions disclosed"
+      ],
+      "present_items": [
+        "description of gold/commodity backing and custodians"
+      ],
+      "obligation": "VA Issuance activity requires a VARA-compliant white paper, ongoing disclosure of material changes, and, for asset-referenced or commodity-linked tokens, a description of backing, custody of backing assets, and redemption mechanics.",
+      "locator": {
+        "title": "VA Issuance Rulebook",
+        "article": "Issuer Obligations",
+        "clause": "White Paper and Ongoing Disclosure",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      }
+    },
+    {
+      "id": "9f20e24e-b2be-4315-9302-31bb329a3d39",
+      "module_id": "vara-conflicts-conduct",
+      "framework": "VARA",
+      "category": "governance",
+      "coverage": "missing",
+      "missing_items": [
+        "conflicts-of-interest policy covering issuer-custodian dual role",
+        "related-party transaction register",
+        "staff personal-account dealing rules",
+        "client disclosure of material conflicts"
+      ],
+      "present_items": [],
+      "obligation": "VASPs must identify, manage, and disclose conflicts of interest arising from proprietary activity, related-party dealings, dual roles (for example issuer plus custodian of the same token), and staff personal holdings.",
+      "locator": {
+        "title": "Company Rulebook",
+        "article": "Conflicts of Interest",
+        "clause": "Identification and Management",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      }
+    },
+    {
+      "id": "ff1f31f4-a4c0-49cd-8fa1-b9e0f665ae8c",
+      "module_id": "vara-technology-controls",
+      "framework": "VARA",
+      "category": "governance",
+      "coverage": "missing",
+      "missing_items": [
+        "cyber-security and access-management policy",
+        "incident-response plan with VARA notification triggers",
+        "penetration-test or independent security assessment"
+      ],
+      "present_items": [
+        "BCP/DR covering key-management infrastructure"
+      ],
+      "obligation": "VASPs must maintain technology, cyber-security, and operational-resilience controls proportionate to custody and issuance activities, including access management, incident response, penetration testing, and business continuity for wallet infrastructure.",
+      "locator": {
+        "title": "Compliance and Risk Management Rulebook",
+        "article": "Technology and Cyber Security",
+        "clause": "Operational Resilience",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      }
+    },
+    {
+      "id": "beaf32f7-bacc-47d4-bd1d-b792ba942a46",
+      "module_id": "mica-whitepaper-disclosures",
+      "framework": "MiCA",
+      "category": "disclosures",
+      "coverage": "missing",
+      "missing_items": [
+        "MiCA-aligned white paper with required content headings",
+        "risk-factor section covering technology, liquidity, and legal risks",
+        "notification or publication record for the white paper"
+      ],
+      "present_items": [
+        "marketing-communications consistency review"
+      ],
+      "obligation": "Offerings of crypto-assets (other than ART/EMT where specific titles apply) require a crypto-asset white paper with fair, clear, and not-misleading information on the issuer, the asset, rights, risks, and the underlying technology. Marketing must be consistent with the white paper.",
+      "locator": {
+        "title": "Title II",
+        "article": "Art. 6",
+        "clause": null,
+        "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj"
+      }
+    },
+    {
+      "id": "9085e9a4-2283-4f0c-b992-25fde16d43e1",
+      "module_id": "mica-market-abuse",
+      "framework": "MiCA",
+      "category": "market_abuse",
+      "coverage": "missing",
+      "missing_items": [
+        "market-abuse surveillance policy",
+        "insider list / inside-information handling procedure",
+        "suspicious-transaction reporting playbook",
+        "staff dealing and wall-crossing controls"
+      ],
+      "present_items": [],
+      "obligation": "Persons professionally arranging or executing transactions in crypto-assets must have arrangements to detect and report insider dealing, unlawful disclosure of inside information, and market manipulation. Issuers and CASPs must control inside information and maintain proportionate surveillance.",
+      "locator": {
+        "title": "Title VI",
+        "article": "Art. 86",
+        "clause": null,
+        "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj"
+      }
+    },
+    {
+      "id": "ec00b357-aca6-467a-9a4f-b55879539b6c",
+      "module_id": "vara-vasp-licensing",
+      "framework": "VARA",
+      "category": "licensing",
+      "coverage": "missing",
+      "missing_items": [
+        "VARA licence (or application) listing each VA Activity",
+        "product-to-activity mapping (custody vs issuance)",
+        "fit-and-proper documentation for controllers and senior managers",
+        "compliance-programme description submitted with the application"
+      ],
+      "present_items": [],
+      "obligation": "A person must not carry out a VA Activity in Dubai unless licensed by VARA for that specific activity category (for example Custody Services, Broker-Dealer, Exchange, VA Issuance). The licence application must map each product to a VA Activity and demonstrate fitness, propriety, and a viable compliance programme.",
+      "locator": {
+        "title": "Virtual Assets and Related Activities Regulations 2023",
+        "article": "Part III \u2014 Licensing",
+        "clause": "Licensed VA Activities",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      }
+    },
+    {
+      "id": "65cf40e0-5980-450a-badb-2a04da1871cc",
+      "module_id": "vara-disclosures-risk",
+      "framework": "VARA",
+      "category": "disclosures",
+      "coverage": "missing",
+      "missing_items": [
+        "product disclosure statement / white paper for each token",
+        "risk-warning set covering custody and reserve risks",
+        "fee schedule",
+        "regulatory-status statement (licensed activities)"
+      ],
+      "present_items": [],
+      "obligation": "Client-facing materials must describe the virtual asset, the VASP's role, material risks (including custody, peg/reserve, and technology risks), fees, and the regulatory status of the product. Disclosures must be kept current and not omit facts that would make them misleading.",
+      "locator": {
+        "title": "Market Conduct Rulebook",
+        "article": "Public Disclosures",
+        "clause": "Risk and Product Information",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      }
+    },
+    {
+      "id": "b6410954-dcad-4c7d-97ff-c0f5266faa31",
+      "module_id": "vara-company-governance",
+      "framework": "VARA",
+      "category": "governance",
+      "coverage": "missing",
+      "missing_items": [
+        "board charter and organisational chart",
+        "appointed Compliance Officer and MLRO",
+        "governance policies approved by the board",
+        "Dubai substance / local-presence evidence"
+      ],
+      "present_items": [],
+      "obligation": "VASPs must maintain a Dubai-appropriate governance structure with a competent board or equivalent, appointed senior officers (including compliance and MLRO functions), documented policies, and clear reporting lines into the licensed entity.",
+      "locator": {
+        "title": "Company Rulebook",
+        "article": "Corporate Governance",
+        "clause": "Board and Senior Management",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      }
+    },
+    {
+      "id": "77502d7e-e5e0-433f-aebd-18dfc574eae8",
+      "module_id": "mica-art-redemption",
+      "framework": "MiCA",
+      "category": "reserve",
+      "coverage": "missing",
+      "missing_items": [
+        "published redemption policy and timelines",
+        "operational process for holder redemption requests",
+        "liquidity plan supporting redemptions",
+        "disclosure of fees and conditions of redemption"
+      ],
+      "present_items": [],
+      "obligation": "Holders of asset-referenced tokens must have a permanent right of redemption against the issuer at market value of the referenced assets, or by delivery of those assets, under published conditions that are not unduly restrictive.",
+      "locator": {
+        "title": "Title III",
+        "article": "Art. 39",
+        "clause": null,
+        "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj"
+      }
+    },
+    {
+      "id": "82f41a2a-681e-4287-bdf9-767a8f6cb655",
+      "module_id": "vara-market-conduct",
+      "framework": "VARA",
+      "category": "market_abuse",
+      "coverage": "missing",
+      "missing_items": [
+        "market-abuse / market-conduct policy",
+        "surveillance or trade-monitoring arrangements",
+        "insider-information and wall-crossing procedure",
+        "escalation and VARA notification playbook"
+      ],
+      "present_items": [],
+      "obligation": "VASPs must not engage in, and must have controls to detect, market manipulation, wash trading, spoofing, and misuse of inside information. Entities that operate markets or distribute tokens need surveillance, insider lists, and escalation to VARA where required.",
+      "locator": {
+        "title": "Market Conduct Rulebook",
+        "article": "Prohibition of Market Abuse",
+        "clause": "Manipulation and Insider Dealing",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      }
+    },
+    {
+      "id": "cc8e9c0d-0b20-4f62-a907-0f9b451f9879",
+      "module_id": "vara-prudential-capital",
+      "framework": "VARA",
+      "category": "prudential",
+      "coverage": "missing",
+      "missing_items": [
+        "paid-up capital evidence vs. activity category minima",
+        "liquidity buffer calculation",
+        "professional indemnity / cyber insurance certificates",
+        "capital reporting pack"
+      ],
+      "present_items": [],
+      "obligation": "Licensed VASPs must maintain paid-up capital, liquid resources, and professional-indemnity or equivalent insurance at the levels specified for their licensed VA Activities, and report capital adequacy to VARA on the required cycle.",
+      "locator": {
+        "title": "Company Rulebook",
+        "article": "Prudential Requirements",
+        "clause": "Capital and Insurance",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      }
+    },
+    {
+      "id": "831d5397-55b6-4e02-9560-c89b2a1d6fb3",
+      "module_id": "mica-art-reserve",
+      "framework": "MiCA",
+      "category": "reserve",
+      "coverage": "partial",
+      "missing_items": [
+        "independent attestation or audit of reserve holdings",
+        "valuation methodology and frequency"
+      ],
+      "present_items": [
+        "reserve-of-assets policy and composition schedule",
+        "segregation of reserve from issuer operating funds"
+      ],
+      "obligation": "Issuers of asset-referenced tokens must maintain a reserve of assets that matches the risks and composition of the referenced assets, keep the reserve segregated, and ensure it is not encumbered for the issuer's own obligations. Composition, valuation, and custody of the reserve must be documented.",
+      "locator": {
+        "title": "Title III",
+        "article": "Art. 36",
+        "clause": null,
+        "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj"
+      }
+    },
+    {
+      "id": "8dd006ee-fc8c-410a-96de-e108b9102853",
+      "module_id": "mica-complaints-handling",
+      "framework": "MiCA",
+      "category": "complaints",
+      "coverage": "missing",
+      "missing_items": [
+        "published complaints-handling procedure",
+        "complaints register and SLA metrics",
+        "free-of-charge filing channel",
+        "template acknowledgements and outcome letters"
+      ],
+      "present_items": [],
+      "obligation": "CASPs must establish and maintain effective, transparent procedures for prompt handling of client complaints, publish those procedures, keep records of complaints and remedies, and ensure clients can file free of charge in an official language of the home Member State or of the client's location.",
+      "locator": {
+        "title": "Title V",
+        "article": "Art. 71",
+        "clause": null,
+        "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj"
+      }
+    },
+    {
+      "id": "6317953c-b507-42b2-aeb3-54731275e6e9",
+      "module_id": "mica-casp-authorisation",
+      "framework": "MiCA",
+      "category": "licensing",
+      "coverage": "missing",
+      "missing_items": [
+        "CASP authorisation application or equivalent passporting notice",
+        "programme of operations covering each intended crypto-asset service",
+        "legal-entity and management-body identification",
+        "home-Member-State competent authority mapping"
+      ],
+      "present_items": [],
+      "obligation": "Entities providing crypto-asset services in the Union must obtain CASP authorisation from a competent authority before going live, unless a limited exemption applies. The application must describe the programme of operations, legal form, and intended services (including custody).",
+      "locator": {
+        "title": "Title V",
+        "article": "Art. 59",
+        "clause": null,
+        "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj"
+      }
+    },
+    {
+      "id": "104e3bb4-050d-406b-95d6-df6e971f00d1",
+      "module_id": "mica-outsourcing",
+      "framework": "MiCA",
+      "category": "governance",
+      "coverage": "missing",
+      "missing_items": [
+        "outsourcing register of critical functions",
+        "due-diligence files on material vendors",
+        "exit and contingency plans for custody infrastructure"
+      ],
+      "present_items": [
+        "written agreements with key-management / cloud providers"
+      ],
+      "obligation": "Where a CASP outsources operational functions, it remains fully responsible to clients and competent authorities. Outsourcing must not impair internal control, competent-authority supervision, or the quality of services. Material outsourcing requires due diligence, written agreements, and exit plans.",
+      "locator": {
+        "title": "Title V",
+        "article": "Art. 73",
+        "clause": null,
+        "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj"
+      }
+    },
+    {
+      "id": "2511f203-d144-427b-b8e6-5657efe653c9",
+      "module_id": "mica-custody-safekeeping",
+      "framework": "MiCA",
+      "category": "custody",
+      "coverage": "partial",
+      "missing_items": [
+        "credit-institution placement of client fiat"
+      ],
+      "present_items": [
+        "client asset segregation policy",
+        "omnibus vs. segregated wallet inventory",
+        "consent records if any reuse of client assets is contemplated"
+      ],
+      "obligation": "CASPs that hold client crypto-assets or funds must make adequate arrangements to safeguard ownership rights, keep client assets distinct from the firm's own, and prevent use of client assets for own account except with explicit consent. Funds should be placed with a credit institution or central bank where applicable.",
+      "locator": {
+        "title": "Title V",
+        "article": "Art. 70",
+        "clause": null,
+        "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj"
+      }
+    },
+    {
+      "id": "5a51f1bc-32b0-402e-bae7-8e2d66ee2bb4",
+      "module_id": "vara-consumer-protection",
+      "framework": "VARA",
+      "category": "complaints",
+      "coverage": "missing",
+      "missing_items": [
+        "published complaints scheme with timelines",
+        "complaints log and root-cause analysis",
+        "fair-treatment / consumer-protection policy",
+        "client-support channels in English and Arabic as appropriate"
+      ],
+      "present_items": [],
+      "obligation": "VASPs must treat clients fairly, provide clear product information, operate an accessible complaints scheme with defined timelines, and keep records of complaints, outcomes, and remediation. Vulnerable-client considerations should be built into onboarding and support.",
+      "locator": {
+        "title": "Market Conduct Rulebook",
+        "article": "Consumer Protection",
+        "clause": "Fair Treatment and Complaints",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      }
+    },
+    {
+      "id": "b1564fcd-f022-422e-aa25-41782536eea3",
+      "module_id": "vara-aml-cft",
+      "framework": "VARA",
+      "category": "prudential",
+      "coverage": "missing",
+      "missing_items": [
+        "AML/CFT policy and business risk assessment",
+        "CDD/KYC playbooks and Travel Rule tooling",
+        "sanctions screening configuration",
+        "MLRO appointment and SAR/STR procedure"
+      ],
+      "present_items": [],
+      "obligation": "VASPs must implement a risk-based AML/CFT programme including CDD/KYC, ongoing monitoring, Travel Rule transmission of originator/beneficiary information, sanctions screening, and SAR/STR reporting via the MLRO.",
+      "locator": {
+        "title": "Compliance and Risk Management Rulebook",
+        "article": "AML / CFT Programme",
+        "clause": "CDD, Travel Rule and Sanctions",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      }
+    },
+    {
+      "id": "3c79951e-471f-4287-ad19-c9df618d9fb6",
+      "module_id": "mica-operational-resilience",
+      "framework": "MiCA",
+      "category": "governance",
+      "coverage": "missing",
+      "missing_items": [
+        "governance and organisational chart",
+        "ICT and cyber-security policy",
+        "business-continuity / disaster-recovery plan",
+        "internal-control and three-lines-of-defence description"
+      ],
+      "present_items": [],
+      "obligation": "CASPs must have robust governance arrangements, including a clear organisational structure, effective risk-management and internal-control mechanisms, business-continuity plans, and ICT security commensurate with the scale of crypto-asset services.",
+      "locator": {
+        "title": "Title V",
+        "article": "Art. 68",
+        "clause": null,
+        "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj"
+      }
+    },
+    {
+      "id": "d48162af-3528-4302-89ce-95304b1fa508",
+      "module_id": "mica-governance-conflicts",
+      "framework": "MiCA",
+      "category": "governance",
+      "coverage": "missing",
+      "missing_items": [
+        "conflicts-of-interest policy",
+        "register of identified conflicts",
+        "client-facing conflict disclosures",
+        "governance chart for the management body"
+      ],
+      "present_items": [],
+      "obligation": "CASPs must identify, prevent, manage and disclose conflicts of interest between themselves (including managers, employees and shareholders) and their clients, and among clients. Organisational arrangements and disclosures must be proportionate to the services offered.",
+      "locator": {
+        "title": "Title V",
+        "article": "Art. 72",
+        "clause": null,
+        "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj"
+      }
+    },
+    {
+      "id": "9df1ada8-075f-4d08-925c-49dd15f956c5",
+      "module_id": "mica-prudential-safeguards",
+      "framework": "MiCA",
+      "category": "prudential",
+      "coverage": "missing",
+      "missing_items": [
+        "own-funds calculation vs. minimum capital / overheads",
+        "audited capital position",
+        "insurance policy if used as a safeguard",
+        "ICAAP-style capital planning note"
+      ],
+      "present_items": [],
+      "obligation": "Authorised CASPs must hold prudential safeguards equal to the higher of a permanent minimum capital amount or a fraction of fixed overheads, in the form of own funds or an equivalent insurance policy covering the territories where services are provided.",
+      "locator": {
+        "title": "Title V",
+        "article": "Art. 67",
+        "clause": null,
+        "url": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj"
+      }
+    }
+  ],
+  "reviews": [],
+  "readiness": [
+    {
+      "framework": "MiCA",
+      "covered": 0,
+      "partial": 3,
+      "missing": 9,
+      "total": 12
+    },
+    {
+      "framework": "VARA",
+      "covered": 1,
+      "partial": 1,
+      "missing": 10,
+      "total": 12
+    }
+  ]
+}
