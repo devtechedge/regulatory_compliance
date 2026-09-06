@@ -1,10 +1,14 @@
 import { NextResponse } from "next/server";
 import { reviewFinding } from "@/lib/demo-store";
+import { gateMutation } from "@/lib/demo-gate";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
 export async function POST(req: Request, { params }: { params: { id: string } }) {
+  const blocked = gateMutation(req);
+  if (blocked) return blocked;
+
   const body = (await req.json().catch(() => ({}))) as {
     action?: "accept" | "edit" | "reject";
     override_text?: string;

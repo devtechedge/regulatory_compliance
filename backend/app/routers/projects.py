@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session, selectinload
 from app.db import get_db
 from app.evaluate import run_evaluation, serialize_run
 from app.models import EvidenceGap, EvaluationRun, Finding, Project
+from app.demo_gate import require_demo_token
 from app.schemas import DocumentOut, EvaluateRequest, ProjectOut, ProjectSummary, RunOut
 
 router = APIRouter()
@@ -67,6 +68,7 @@ def evaluate_project(
     project_id: str,
     body: EvaluateRequest,
     db: Session = Depends(get_db),
+    _: None = Depends(require_demo_token),
 ) -> RunOut:
     project = db.scalar(
         select(Project)
