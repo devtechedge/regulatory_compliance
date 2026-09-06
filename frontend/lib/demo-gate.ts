@@ -31,7 +31,7 @@ export function allowedOrigins(): string[] {
     "http://127.0.0.1:3000",
   ];
   if (!raw) return defaults;
-  return [...new Set([...defaults, ...raw.split(",").map((s) => s.trim()).filter(Boolean)])];
+  return Array.from(new Set([...defaults, ...raw.split(",").map((s) => s.trim()).filter(Boolean)]));
 }
 
 function clientIp(req: Request): string {
