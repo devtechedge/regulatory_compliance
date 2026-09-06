@@ -4,11 +4,27 @@ import type { Finding, Framework, Project, ProjectSummary, ReviewAction, Run } f
 // Set NEXT_PUBLIC_API_URL=http://localhost:8000 to hit FastAPI (Compose / local backend).
 const API = process.env.NEXT_PUBLIC_API_URL ?? "";
 
+/** Published demo password for HITL/eval mutations (override via localStorage.regtrace_demo_token). */
+const DEMO_TOKEN_DEFAULT = "Demo123!";
+
+function demoTokenHeader(): Record<string, string> {
+  try {
+    const fromStore = typeof window !== "undefined" ? window.localStorage.getItem("regtrace_demo_token") : null;
+    const token = (fromStore || process.env.NEXT_PUBLIC_DEMO_TOKEN || DEMO_TOKEN_DEFAULT).trim();
+    return token ? { "x-demo-token": token } : {};
+  } catch {
+    return { "x-demo-token": DEMO_TOKEN_DEFAULT };
+  }
+}
+
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
+  const method = (init?.method || "GET").toUpperCase();
+  const mutationHeaders = method !== "GET" && method !== "HEAD" ? demoTokenHeader() : {};
   const res = await fetch(`${API}${path}`, {
     ...init,
     headers: {
       "Content-Type": "application/json",
+      ...mutationHeaders,
       ...(init?.headers || {}),
     },
     cache: "no-store",

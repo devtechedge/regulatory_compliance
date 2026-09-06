@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session, selectinload
 from app.db import get_db
 from app.evaluate import serialize_finding
 from app.models import Finding, ReviewAction
+from app.demo_gate import require_demo_token
 from app.schemas import FindingOut, ReviewRequest
 
 router = APIRouter()
@@ -15,6 +16,7 @@ def review_finding(
     finding_id: str,
     body: ReviewRequest,
     db: Session = Depends(get_db),
+    _: None = Depends(require_demo_token),
 ) -> FindingOut:
     finding = db.scalar(
         select(Finding)
