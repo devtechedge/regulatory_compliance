@@ -1,4 +1,4 @@
-# RegTrace-AI
+﻿# RegTrace-AI
 
 HITL Web3 compliance copilot for VASP licensing: source-traced MiCA / VARA mapping, hallucination flags, and a human review dashboard.
 
@@ -85,7 +85,7 @@ No OpenAI key required.
 
 Postgres is optional. The API defaults to SQLite if DATABASE_URL is unset.
 
-From `backend/`, create a virtualenv, install the Python requirements file, export `DATA_DIR=../data` and a sqlite `DATABASE_URL`, then start uvicorn on `app.main:app` port 8000.
+From `backend/`, create a virtualenv, install the Python requirements file, export `DATA_DIR=../frontend/data` and a sqlite `DATABASE_URL`, then start uvicorn on `app.main:app` port 8000.
 
 From `frontend/`, install Node dependencies. Leave `NEXT_PUBLIC_API_URL` empty to use the Next demo API, or export `NEXT_PUBLIC_API_URL=http://localhost:8000` to use FastAPI, then start the Next.js dev server.
 
@@ -106,3 +106,4 @@ pytest backend/tests; frontend typecheck; Playwright from frontend/.
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
