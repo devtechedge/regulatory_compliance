@@ -1,0 +1,238 @@
+{
+  "id": "VARA",
+  "name": "Dubai Virtual Assets Regulatory Authority",
+  "jurisdiction": "Dubai, United Arab Emirates",
+  "instrument": "Virtual Assets and Related Activities Regulations 2023 and accompanying Rulebooks",
+  "source_url": "https://www.vara.ae/en/rules-and-regulations/",
+  "description": "Dubai VA licensing regime covering VASP categories (Broker-Dealer, Custody, Exchange, Lending, VA Issuance, Advisory, and others), market conduct, consumer protection, and custody rulebooks.",
+  "modules": [
+    {
+      "id": "vara-vasp-licensing",
+      "framework": "VARA",
+      "locator": {
+        "title": "Virtual Assets and Related Activities Regulations 2023",
+        "article": "Part III — Licensing",
+        "clause": "Licensed VA Activities",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      },
+      "category": "licensing",
+      "obligation": "A person must not carry out a VA Activity in Dubai unless licensed by VARA for that specific activity category (for example Custody Services, Broker-Dealer, Exchange, VA Issuance). The licence application must map each product to a VA Activity and demonstrate fitness, propriety, and a viable compliance programme.",
+      "evidence_checklist": [
+        "VARA licence (or application) listing each VA Activity",
+        "product-to-activity mapping (custody vs issuance)",
+        "fit-and-proper documentation for controllers and senior managers",
+        "compliance-programme description submitted with the application"
+      ],
+      "keywords": ["VASP", "licensing", "VA Activity", "custody services", "VA issuance"]
+    },
+    {
+      "id": "vara-custody-rulebook",
+      "framework": "VARA",
+      "locator": {
+        "title": "Custody Services Rulebook",
+        "article": "Client VA Safekeeping",
+        "clause": "Segregation of Client Virtual Assets",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      },
+      "category": "custody",
+      "obligation": "Licensed Custody VASPs must safekeep client virtual assets separately from firm assets, maintain accurate books of client entitlements, and implement wallet and key-management controls (including cold storage for a material portion of holdings) consistent with the Custody Services Rulebook.",
+      "evidence_checklist": [
+        "client-asset segregation policy aligned to the Custody Rulebook",
+        "wallet inventory distinguishing firm vs client, hot vs cold",
+        "key-ceremony and multi-party control records",
+        "daily reconciliation of on-chain balances to the client ledger"
+      ],
+      "keywords": ["custody", "segregation", "cold storage", "key management", "client virtual assets"]
+    },
+    {
+      "id": "vara-company-governance",
+      "framework": "VARA",
+      "locator": {
+        "title": "Company Rulebook",
+        "article": "Corporate Governance",
+        "clause": "Board and Senior Management",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      },
+      "category": "governance",
+      "obligation": "VASPs must maintain a Dubai-appropriate governance structure with a competent board or equivalent, appointed senior officers (including compliance and MLRO functions), documented policies, and clear reporting lines into the licensed entity.",
+      "evidence_checklist": [
+        "board charter and organisational chart",
+        "appointed Compliance Officer and MLRO",
+        "governance policies approved by the board",
+        "Dubai substance / local-presence evidence"
+      ],
+      "keywords": ["governance", "board", "compliance officer", "MLRO", "Company Rulebook"]
+    },
+    {
+      "id": "vara-conflicts-conduct",
+      "framework": "VARA",
+      "locator": {
+        "title": "Company Rulebook",
+        "article": "Conflicts of Interest",
+        "clause": "Identification and Management",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      },
+      "category": "governance",
+      "obligation": "VASPs must identify, manage, and disclose conflicts of interest arising from proprietary activity, related-party dealings, dual roles (for example issuer plus custodian of the same token), and staff personal holdings.",
+      "evidence_checklist": [
+        "conflicts-of-interest policy covering issuer-custodian dual role",
+        "related-party transaction register",
+        "staff personal-account dealing rules",
+        "client disclosure of material conflicts"
+      ],
+      "keywords": ["conflicts of interest", "related party", "proprietary", "dual role", "disclosure"]
+    },
+    {
+      "id": "vara-market-conduct",
+      "framework": "VARA",
+      "locator": {
+        "title": "Market Conduct Rulebook",
+        "article": "Prohibition of Market Abuse",
+        "clause": "Manipulation and Insider Dealing",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      },
+      "category": "market_abuse",
+      "obligation": "VASPs must not engage in, and must have controls to detect, market manipulation, wash trading, spoofing, and misuse of inside information. Entities that operate markets or distribute tokens need surveillance, insider lists, and escalation to VARA where required.",
+      "evidence_checklist": [
+        "market-abuse / market-conduct policy",
+        "surveillance or trade-monitoring arrangements",
+        "insider-information and wall-crossing procedure",
+        "escalation and VARA notification playbook"
+      ],
+      "keywords": ["market abuse", "manipulation", "insider", "wash trading", "Market Conduct Rulebook"]
+    },
+    {
+      "id": "vara-consumer-protection",
+      "framework": "VARA",
+      "locator": {
+        "title": "Market Conduct Rulebook",
+        "article": "Consumer Protection",
+        "clause": "Fair Treatment and Complaints",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      },
+      "category": "complaints",
+      "obligation": "VASPs must treat clients fairly, provide clear product information, operate an accessible complaints scheme with defined timelines, and keep records of complaints, outcomes, and remediation. Vulnerable-client considerations should be built into onboarding and support.",
+      "evidence_checklist": [
+        "published complaints scheme with timelines",
+        "complaints log and root-cause analysis",
+        "fair-treatment / consumer-protection policy",
+        "client-support channels in English and Arabic as appropriate"
+      ],
+      "keywords": ["consumer protection", "fair treatment", "complaints", "client information", "vulnerable clients"]
+    },
+    {
+      "id": "vara-disclosures-risk",
+      "framework": "VARA",
+      "locator": {
+        "title": "Market Conduct Rulebook",
+        "article": "Public Disclosures",
+        "clause": "Risk and Product Information",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      },
+      "category": "disclosures",
+      "obligation": "Client-facing materials must describe the virtual asset, the VASP's role, material risks (including custody, peg/reserve, and technology risks), fees, and the regulatory status of the product. Disclosures must be kept current and not omit facts that would make them misleading.",
+      "evidence_checklist": [
+        "product disclosure statement / white paper for each token",
+        "risk-warning set covering custody and reserve risks",
+        "fee schedule",
+        "regulatory-status statement (licensed activities)"
+      ],
+      "keywords": ["disclosures", "risk warning", "fees", "product information", "misleading"]
+    },
+    {
+      "id": "vara-va-issuance",
+      "framework": "VARA",
+      "locator": {
+        "title": "VA Issuance Rulebook",
+        "article": "Issuer Obligations",
+        "clause": "White Paper and Ongoing Disclosure",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      },
+      "category": "disclosures",
+      "obligation": "VA Issuance activity requires a VARA-compliant white paper, ongoing disclosure of material changes, and, for asset-referenced or commodity-linked tokens, a description of backing, custody of backing assets, and redemption mechanics.",
+      "evidence_checklist": [
+        "VA Issuance white paper submitted or prepared for VARA",
+        "description of gold/commodity backing and custodians",
+        "ongoing-disclosure procedure for material events",
+        "redemption and transfer restrictions disclosed"
+      ],
+      "keywords": ["VA issuance", "white paper", "backing assets", "commodity-linked", "ongoing disclosure"]
+    },
+    {
+      "id": "vara-reserve-attestation",
+      "framework": "VARA",
+      "locator": {
+        "title": "VA Issuance Rulebook",
+        "article": "Reserve and Backing Assets",
+        "clause": "Attestation and Safekeeping of Reserves",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      },
+      "category": "reserve",
+      "obligation": "Where a issued virtual asset is represented as backed by commodities or other assets, the issuer must hold matching reserves with an appropriate custodian, prohibit encumbrance that would defeat holder claims, and obtain periodic independent attestation of quantity, quality, and segregation of the backing assets.",
+      "evidence_checklist": [
+        "reserve composition and vault/custodian schedule",
+        "independent attestation (quantity, quality, segregation)",
+        "encumbrance / lien negative confirmation",
+        "attestation frequency and public summary"
+      ],
+      "keywords": ["reserve", "attestation", "backing", "commodity", "vault", "gold"]
+    },
+    {
+      "id": "vara-aml-cft",
+      "framework": "VARA",
+      "locator": {
+        "title": "Compliance and Risk Management Rulebook",
+        "article": "AML / CFT Programme",
+        "clause": "CDD, Travel Rule and Sanctions",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      },
+      "category": "prudential",
+      "obligation": "VASPs must implement a risk-based AML/CFT programme including CDD/KYC, ongoing monitoring, Travel Rule transmission of originator/beneficiary information, sanctions screening, and SAR/STR reporting via the MLRO.",
+      "evidence_checklist": [
+        "AML/CFT policy and business risk assessment",
+        "CDD/KYC playbooks and Travel Rule tooling",
+        "sanctions screening configuration",
+        "MLRO appointment and SAR/STR procedure"
+      ],
+      "keywords": ["AML", "CFT", "KYC", "Travel Rule", "sanctions", "MLRO"]
+    },
+    {
+      "id": "vara-technology-controls",
+      "framework": "VARA",
+      "locator": {
+        "title": "Compliance and Risk Management Rulebook",
+        "article": "Technology and Cyber Security",
+        "clause": "Operational Resilience",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      },
+      "category": "governance",
+      "obligation": "VASPs must maintain technology, cyber-security, and operational-resilience controls proportionate to custody and issuance activities, including access management, incident response, penetration testing, and business continuity for wallet infrastructure.",
+      "evidence_checklist": [
+        "cyber-security and access-management policy",
+        "incident-response plan with VARA notification triggers",
+        "penetration-test or independent security assessment",
+        "BCP/DR covering key-management infrastructure"
+      ],
+      "keywords": ["cyber security", "operational resilience", "incident response", "business continuity", "wallets"]
+    },
+    {
+      "id": "vara-prudential-capital",
+      "framework": "VARA",
+      "locator": {
+        "title": "Company Rulebook",
+        "article": "Prudential Requirements",
+        "clause": "Capital and Insurance",
+        "url": "https://www.vara.ae/en/rules-and-regulations/"
+      },
+      "category": "prudential",
+      "obligation": "Licensed VASPs must maintain paid-up capital, liquid resources, and professional-indemnity or equivalent insurance at the levels specified for their licensed VA Activities, and report capital adequacy to VARA on the required cycle.",
+      "evidence_checklist": [
+        "paid-up capital evidence vs. activity category minima",
+        "liquidity buffer calculation",
+        "professional indemnity / cyber insurance certificates",
+        "capital reporting pack"
+      ],
+      "keywords": ["prudential", "capital", "insurance", "liquidity", "Company Rulebook"]
+    }
+  ]
+}
