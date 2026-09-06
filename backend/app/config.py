@@ -1,4 +1,4 @@
-from pathlib import Path
+﻿from pathlib import Path
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -23,7 +23,7 @@ class Settings(BaseSettings):
             return Path(self.data_dir)
         here = Path(__file__).resolve()
         # backend/app/config.py -> repo data/
-        return here.parents[2] / "data"
+        return here.parents[2] / "frontend" / "data"
 
     @property
     def sqlalchemy_url(self) -> str:
@@ -40,3 +40,4 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+

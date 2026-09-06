@@ -1,7 +1,7 @@
-import { randomUUID } from "crypto";
-import micaJson from "@/data/mica.json";
-import varaJson from "@/data/vara.json";
-import aurumJson from "@/data/aurum-custody.json";
+﻿import { randomUUID } from "crypto";
+import micaJson from "@/data/frameworks/mica.json";
+import varaJson from "@/data/frameworks/vara.json";
+import aurumJson from "@/data/projects/aurum-custody.json";
 import demoRunJson from "@/data/demo-run.json";
 import type {
   Finding,

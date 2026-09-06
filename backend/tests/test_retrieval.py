@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import json
 import os
@@ -12,7 +12,7 @@ def _data_dir() -> Path:
     env = os.environ.get("DATA_DIR")
     if env:
         return Path(env)
-    return Path(__file__).resolve().parents[2] / "data"
+    return Path(__file__).resolve().parents[2] / "frontend" / "data"
 
 
 def _modules_from_json() -> list[RegulatoryModule]:
@@ -68,3 +68,4 @@ def test_rank_returns_custody_segregation_module_for_pack_snippet():
     assert ids, "retrieve returned no modules"
     assert ids[0] in custody_ids
     assert custody_ids & set(ids[:5])
+
