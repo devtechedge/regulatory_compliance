@@ -1,4 +1,4 @@
-"""Citation validator — second pass after generation.
+"""Citation validator - second pass after generation.
 
 Drops or flags findings that cite a module not in the retrieved set,
 and flags claims whose key terms do not overlap the cited obligation.
@@ -42,7 +42,7 @@ def validate_drafts(
         mid = draft.module.id
         if mid not in retrieved_ids:
             flags.append("cited_module_not_in_retrieved_set")
-            # Drop ungrounded citations entirely — they cannot be source-traced.
+            # Drop ungrounded citations entirely - they cannot be source-traced.
             continue
 
         claim_terms = _claim_terms(draft.claim)
@@ -79,7 +79,7 @@ def assign_status(draft: DraftFinding) -> tuple[str, float]:
     if draft.coverage == "partial":
         return _STATUS_HITL, min(base, 0.72)
     if draft.coverage == "missing":
-        # A well-cited gap is still grounded — the *gap* is supported by the pack.
+        # A well-cited gap is still grounded - the *gap* is supported by the pack.
         return _STATUS_GROUNDED, min(max(base, 0.55), 0.88)
     if draft.coverage == "covered" and base >= 0.55:
         return _STATUS_GROUNDED, base

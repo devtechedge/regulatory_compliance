@@ -11,7 +11,7 @@ function ts(iso: string): string {
 export function renderMarkdown(run: Run): string {
   const lines: string[] = [];
   const name = projectName();
-  lines.push(`# RegTrace-AI gap report — ${name}`);
+  lines.push(`# RegTrace-AI gap report - ${name}`);
   lines.push("");
   lines.push(`- **Run ID:** \`${run.id}\``);
   lines.push(`- **Project:** ${name} (\`${run.project_id}\`)`);
@@ -46,7 +46,7 @@ export function renderMarkdown(run: Run): string {
     lines.push(`- **Confidence:** ${f.confidence.toFixed(2)} (retrieval ${f.retrieval_score.toFixed(2)})`);
     lines.push(`- **Coverage:** ${f.coverage}`);
     if (cite) {
-      const clause = cite.clause ? ` — ${cite.clause}` : "";
+      const clause = cite.clause ? ` - ${cite.clause}` : "";
       lines.push(`- **Citation:** [${cite.title} ${cite.article}${clause}](${cite.url})`);
     }
     if (f.flags.length) lines.push(`- **Validator flags:** ${f.flags.join(", ")}`);
@@ -90,7 +90,7 @@ export function renderMarkdown(run: Run): string {
     for (const r of run.reviews) {
       lines.push(
         `- \`${r.action}\` on \`${r.module_id}\` at ${ts(r.created_at)}` +
-          (r.note ? ` — ${r.note}` : ""),
+          (r.note ? ` - ${r.note}` : ""),
       );
       if (r.override_text) lines.push(`  - Override: ${r.override_text}`);
     }

@@ -1,4 +1,4 @@
-# RegTrace-AI gap report — Aurum Custody
+# RegTrace-AI gap report - Aurum Custody
 
 - **Run ID:** `demo-aurum-001`
 - **Project:** Aurum Custody (`aurum-custody`)
@@ -44,7 +44,7 @@ The pack describes client-asset segregation, a prohibition on rehypothecation, a
 - **Module:** `vara-custody-rulebook`
 - **Confidence:** 0.84 (retrieval 0.88)
 - **Coverage:** covered
-- **Citation:** [Custody Services Rulebook Client VA Safekeeping — Segregation of Client Virtual Assets](https://www.vara.ae/en/rules-and-regulations/)
+- **Citation:** [Custody Services Rulebook Client VA Safekeeping - Segregation of Client Virtual Assets](https://www.vara.ae/en/rules-and-regulations/)
 
 Wallet architecture (unique deposit addresses, 3-of-5 MPC, 2% hot-wallet cap, daily reconciliation) maps to the VARA Custody Services Rulebook segregation and key-management expectations. Cold-storage share is material. Independent key-ceremony vendor is named.
 
@@ -62,7 +62,7 @@ Licensing gap against MiCA Art. 36: the pack does not evidence issuers of asset-
 - **Module:** `vara-reserve-attestation`
 - **Confidence:** 0.79 (retrieval 0.74)
 - **Coverage:** missing
-- **Citation:** [VA Issuance Rulebook Reserve and Backing Assets — Attestation and Safekeeping of Reserves](https://www.vara.ae/en/rules-and-regulations/)
+- **Citation:** [VA Issuance Rulebook Reserve and Backing Assets - Attestation and Safekeeping of Reserves](https://www.vara.ae/en/rules-and-regulations/)
 
 AURUM-X is marketed as 1:1 allocated gold but the pack contains no independent attestation of quantity, quality, or segregation, and is silent on encumbrance / liens. Vault LoI is not a reserve report.
 
@@ -80,7 +80,7 @@ Licensing gap against MiCA Art. 71: no published complaints-handling procedure, 
 - **Module:** `vara-consumer-protection`
 - **Confidence:** 0.80 (retrieval 0.66)
 - **Coverage:** missing
-- **Citation:** [Market Conduct Rulebook Consumer Protection — Fair Treatment and Complaints](https://www.vara.ae/en/rules-and-regulations/)
+- **Citation:** [Market Conduct Rulebook Consumer Protection - Fair Treatment and Complaints](https://www.vara.ae/en/rules-and-regulations/)
 
 No complaints scheme, SLA, fair-treatment policy, or Arabic/English client-support plan. Consumer-protection evidence is absent.
 
@@ -98,7 +98,7 @@ No market-abuse surveillance policy, insider list, or suspicious-transaction pla
 - **Module:** `vara-market-conduct`
 - **Confidence:** 0.81 (retrieval 0.70)
 - **Coverage:** missing
-- **Citation:** [Market Conduct Rulebook Prohibition of Market Abuse — Manipulation and Insider Dealing](https://www.vara.ae/en/rules-and-regulations/)
+- **Citation:** [Market Conduct Rulebook Prohibition of Market Abuse - Manipulation and Insider Dealing](https://www.vara.ae/en/rules-and-regulations/)
 
 Missing market-conduct policy, surveillance, insider-information procedure, and VARA escalation playbook. Staff personal-account dealing is unrestricted.
 
@@ -116,7 +116,7 @@ This pack is treated as a disclosure document but is marked confidential and "no
 - **Module:** `vara-va-issuance`
 - **Confidence:** 0.61 (retrieval 0.58)
 - **Coverage:** partial
-- **Citation:** [VA Issuance Rulebook Issuer Obligations — White Paper and Ongoing Disclosure](https://www.vara.ae/en/rules-and-regulations/)
+- **Citation:** [VA Issuance Rulebook Issuer Obligations - White Paper and Ongoing Disclosure](https://www.vara.ae/en/rules-and-regulations/)
 
 Product narrative exists; a VARA-compliant issuance white paper, ongoing-disclosure procedure, and legal characterisation of the gold claim do not.
 
@@ -134,7 +134,7 @@ No CASP authorisation has been granted or filed. A draft programme of operations
 - **Module:** `vara-vasp-licensing`
 - **Confidence:** 0.60 (retrieval 0.57)
 - **Coverage:** partial
-- **Citation:** [Virtual Assets and Related Activities Regulations 2023 Part III — Licensing](https://www.vara.ae/en/rules-and-regulations/)
+- **Citation:** [Virtual Assets and Related Activities Regulations 2023 Part III - Licensing](https://www.vara.ae/en/rules-and-regulations/)
 
 Product-to-activity mapping (Custody Services + VA Issuance) is stated. Fit-and-proper files, licence application, and compliance programme submitted to VARA are not in the pack.
 
@@ -152,7 +152,7 @@ Conflicts of interest are not documented despite the dual role of issuer and cus
 - **Module:** `vara-conflicts-conduct`
 - **Confidence:** 0.63 (retrieval 0.59)
 - **Coverage:** missing
-- **Citation:** [Company Rulebook Conflicts of Interest — Identification and Management](https://www.vara.ae/en/rules-and-regulations/)
+- **Citation:** [Company Rulebook Conflicts of Interest - Identification and Management](https://www.vara.ae/en/rules-and-regulations/)
 
 No conflicts policy covering the issuer-custodian dual role, no related-party register, no personal-account dealing rules.
 
@@ -200,10 +200,10 @@ Missing:
 
 ## HITL overrides logged
 
-- `edit` on `mica-whitepaper-disclosures` at 2026-08-29 17:41 UTC — Reviewer notes Title III ART white paper (not Title II) is the correct heading once AURUM-X is characterised as an ART.
+- `edit` on `mica-whitepaper-disclosures` at 2026-08-29 17:41 UTC - Reviewer notes Title III ART white paper (not Title II) is the correct heading once AURUM-X is characterised as an ART.
   - Override: Characterise AURUM-X under MiCA Title III (ART) rather than Title II. Require a Title III white paper with reserve, redemption, and issuer-governance headings before any EU offer.
-- `reject` on `vara-aml-cft` at 2026-08-29 17:44 UTC — Six-page AML skeleton is not a programme; do not treat CDD mentions as coverage.
-- `accept` on `mica-custody-segregation` at 2026-08-29 17:46 UTC — Segregation policy + MPC runbook are sufficient to mark custody as covered for this pack, pending a live wallet inventory sample.
+- `reject` on `vara-aml-cft` at 2026-08-29 17:44 UTC - Six-page AML skeleton is not a programme; do not treat CDD mentions as coverage.
+- `accept` on `mica-custody-segregation` at 2026-08-29 17:46 UTC - Segregation policy + MPC runbook are sufficient to mark custody as covered for this pack, pending a live wallet inventory sample.
 
 ---
 Generated by RegTrace-AI. Citations link to official sources; paraphrases are original.

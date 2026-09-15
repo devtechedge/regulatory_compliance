@@ -4,7 +4,7 @@ RegTrace-AI is a **demo** (local Compose or Vercel demo-mode). It is not a produ
 
 **Date:** 2026-09-06
 
-Repos stay **public until deliberately made private**. Honest demo threat model — **not** a bank-grade guarantee.
+Repos stay **public until deliberately made private**. Honest demo threat model - **not** a bank-grade guarantee.
 
 ## What this demo is
 
@@ -18,7 +18,7 @@ Public **GET** of the seeded demo pack stays open (frameworks, project, runs, he
 
 **Mutating** routes (`POST /api/projects/{id}/evaluate`, `POST /api/findings/{id}/review`) require:
 
-1. `x-demo-token` matching `DEMO_TOKEN` (default published password `Demo123!` — see README)
+1. `x-demo-token` matching `DEMO_TOKEN` (default published password `Demo123!` - see README)
 2. Soft Origin allowlist (`https://regtrace-ai.vercel.app`, localhost, or same Host)
 3. Best-effort in-memory rate limit (~30 mutations / minute / IP)
 

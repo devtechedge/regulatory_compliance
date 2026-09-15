@@ -17,7 +17,7 @@ def _ts(dt: datetime) -> str:
 def render_markdown(run: EvaluationRun, project: Project) -> str:
     data = serialize_run(run)
     lines: list[str] = []
-    lines.append(f"# RegTrace-AI gap report — {project.name}")
+    lines.append(f"# RegTrace-AI gap report - {project.name}")
     lines.append("")
     lines.append(f"- **Run ID:** `{data.id}`")
     lines.append(f"- **Project:** {project.name} (`{project.id}`)")
@@ -51,7 +51,7 @@ def render_markdown(run: EvaluationRun, project: Project) -> str:
         lines.append(f"- **Confidence:** {f.confidence:.2f} (retrieval {f.retrieval_score:.2f})")
         lines.append(f"- **Coverage:** {f.coverage}")
         if cite:
-            clause = f" — {cite.clause}" if cite.clause else ""
+            clause = f" - {cite.clause}" if cite.clause else ""
             lines.append(f"- **Citation:** [{cite.title} {cite.article}{clause}]({cite.url})")
         if f.flags:
             lines.append(f"- **Validator flags:** {', '.join(f.flags)}")
@@ -88,7 +88,7 @@ def render_markdown(run: EvaluationRun, project: Project) -> str:
         for r in data.reviews:
             lines.append(
                 f"- `{r.action}` on `{r.module_id}` at {_ts(r.created_at)}"
-                + (f" — {r.note}" if r.note else "")
+                + (f" - {r.note}" if r.note else "")
             )
             if r.override_text:
                 lines.append(f"  - Override: {r.override_text}")

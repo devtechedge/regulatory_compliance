@@ -16,7 +16,7 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RegTrace-AI — HITL Web3 compliance copilot",
+  title: "RegTrace-AI - HITL Web3 compliance copilot",
   description:
     "Human-in-the-Loop regulatory copilot for VASP licensing. Source-traced MiCA / VARA framework mapping with hallucination mitigation.",
   icons: {

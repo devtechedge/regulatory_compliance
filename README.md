@@ -17,7 +17,7 @@ HITL Web3 compliance copilot for VASP licensing: source-traced MiCA / VARA mappi
 
 > **Status:** Vercel demo-mode (Next.js API routes, seeded Aurum Custody, HITL reviews in-memory / reset on cold start). Local Compose remains the full FastAPI + Postgres path. Deterministic retrieval-bounded generator; no API key. Findings are not legal advice. CI on `main` is green (pytest, typecheck, Playwright).
 >
-> **Demo password (HITL / eval mutations):** `Demo123!` — sent as `x-demo-token` (see [SECURITY.md](SECURITY.md)). Public GET of the seeded pack stays open.
+> **Demo password (HITL / eval mutations):** `Demo123!` - sent as `x-demo-token` (see [SECURITY.md](SECURITY.md)). Public GET of the seeded pack stays open.
 
 Vercel project Root Directory is `frontend` (Next.js App Router demo API; FastAPI is not part of the Vercel build).
 
