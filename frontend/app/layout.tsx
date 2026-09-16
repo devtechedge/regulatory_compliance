@@ -15,10 +15,26 @@ const mono = IBM_Plex_Mono({
   variable: "--font-mono",
 });
 
+const PAGE_TITLE = "RegTrace-AI - HITL Web3 compliance copilot";
+const PAGE_DESCRIPTION =
+  "Human-in-the-Loop regulatory copilot for VASP licensing. Source-traced MiCA / VARA framework mapping with hallucination mitigation.";
+const SITE_URL = "https://regtrace-ai.vercel.app";
+
 export const metadata: Metadata = {
-  title: "RegTrace-AI - HITL Web3 compliance copilot",
-  description:
-    "Human-in-the-Loop regulatory copilot for VASP licensing. Source-traced MiCA / VARA framework mapping with hallucination mitigation.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  // Shared links (LinkedIn, Slack, email) render a bare URL without these.
+  openGraph: {
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: SITE_URL,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  },
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
