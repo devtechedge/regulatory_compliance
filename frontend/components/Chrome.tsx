@@ -90,9 +90,9 @@ export function Chrome() {
         </nav>
       )}
       <div className="border-t border-line bg-ink-900">
-        <div className="mx-auto flex w-full min-w-0 max-w-[1440px] gap-6 overflow-x-auto px-4 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-slate-400 sm:px-5">
+        <div className="mx-auto flex w-full min-w-0 max-w-[1440px] flex-wrap gap-x-6 gap-y-1 px-4 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-slate-400 sm:px-5 lg:flex-nowrap lg:overflow-x-auto">
           {RAIL.map((item) => (
-            <span key={item} className="shrink-0 whitespace-nowrap">
+            <span key={item} className="whitespace-nowrap">
               {item}
             </span>
           ))}
