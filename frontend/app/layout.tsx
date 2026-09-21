@@ -50,9 +50,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOT }} />
       </head>
-      <body className="font-sans antialiased bg-ink-950 text-slate-100">
+      <body className="min-w-0 overflow-x-clip font-sans antialiased bg-ink-950 text-slate-100">
         <Chrome />
-        <main className="mx-auto max-w-[1440px] px-5 pb-16 pt-4">{children}</main>
+        <main className="mx-auto w-full min-w-0 max-w-[1440px] px-4 pb-16 pt-4 sm:px-5">{children}</main>
       </body>
     </html>
   );
