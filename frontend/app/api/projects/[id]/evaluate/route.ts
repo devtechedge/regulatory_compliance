@@ -5,11 +5,12 @@ import { gateMutation } from "@/lib/demo-gate";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-export async function POST(req: Request, { params }: { params: { id: string } }) {
+export async function POST(req: Request, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const blocked = gateMutation(req);
   if (blocked) return blocked;
 
-  const run = evaluateProject(params.id);
+  const run = evaluateProject(id);
   if (!run) {
     return NextResponse.json({ detail: "Project not found" }, { status: 404 });
   }

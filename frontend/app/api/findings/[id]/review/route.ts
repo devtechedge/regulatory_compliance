@@ -5,7 +5,8 @@ import { gateMutation } from "@/lib/demo-gate";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-export async function POST(req: Request, { params }: { params: { id: string } }) {
+export async function POST(req: Request, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const blocked = gateMutation(req);
   if (blocked) return blocked;
 
@@ -17,7 +18,7 @@ export async function POST(req: Request, { params }: { params: { id: string } })
   if (body.action !== "accept" && body.action !== "edit" && body.action !== "reject") {
     return NextResponse.json({ detail: "Invalid action" }, { status: 400 });
   }
-  const finding = reviewFinding(params.id, {
+  const finding = reviewFinding(id, {
     action: body.action,
     override_text: body.override_text,
     note: body.note,

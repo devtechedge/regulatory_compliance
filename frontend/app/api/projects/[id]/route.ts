@@ -4,8 +4,9 @@ import { getProject } from "@/lib/demo-store";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-export function GET(_req: Request, { params }: { params: { id: string } }) {
-  const project = getProject(params.id);
+export async function GET(_req: Request, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const project = getProject(id);
   if (!project) {
     return NextResponse.json({ detail: "Project not found" }, { status: 404 });
   }
